@@ -540,6 +540,270 @@ graph TB
     style D fill:#f3e5f5
     style E fill:#fce4ec
 ```
+
+
+## 👥Azure Data Team Structure & Roles
+### Organizational Structure
+
+```mermaid
+graph TB
+    subgraph A [Data Leadership]
+        A1[Chief Data Officer<br/>CDO]
+        A2[Data Architect<br/>Lead]
+    end
+    
+    subgraph B [Data Engineering Team]
+        B1[Data Engineering<br/>Manager]
+        B2[Senior Data<br/>Engineer]
+        B3[Data Engineer]
+        B4[DataOps Engineer]
+    end
+    
+    subgraph C [Analytics & BI Team]
+        C1[BI Team Lead]
+        C2[Data Analyst]
+        C3[BI Developer]
+        C4[Power BI Specialist]
+    end
+    
+    subgraph D [Data Governance]
+        D1[Data Governance<br/>Manager]
+        D2[Data Quality<br/>Engineer]
+    end
+    
+    subgraph E [Infrastructure & DevOps]
+        E1[Cloud<br/>Architect]
+        E2[Azure<br/>Administrator]
+        E3[DevOps Engineer]
+    end
+    
+    A1 --> B1
+    A1 --> C1
+    A1 --> D1
+    A2 --> E1
+    
+    B1 --> B2
+    B1 --> B3
+    B1 --> B4
+    
+    C1 --> C2
+    C1 --> C3
+    C1 --> C4
+    
+    D1 --> D2
+    
+    E1 --> E2
+    E1 --> E3
+    
+    style A fill:#2E86AB
+    style B fill:#A23B72
+    style C fill:#F18F01
+    style D fill:#C73E1D
+    style E fill:#3E8914
+```
+
+## Detailed Role Responsibilities
+### Data Engineering Team
+
+```mermaid
+graph LR
+    subgraph DE [Data Engineering Roles]
+        DE1[Data Engineering Manager]
+        DE2[Senior Data Engineer]
+        DE3[Data Engineer]
+        DE4[DataOps Engineer]
+    end
+    
+    subgraph RESP [Key Responsibilities]
+        R1[Pipeline Design<br/>& Architecture]
+        R2[ETL/ELT<br/>Development]
+        R3[Data Modeling<br/>& Optimization]
+        R4[CI/CD &<br/>Monitoring]
+    end
+    
+    DE1 --> R1
+    DE2 --> R2
+    DE3 --> R3
+    DE4 --> R4
+    
+    style DE fill:#A23B72
+    style RESP fill:#e8f5e8
+```
+
+## Analytics & BI Team
+
+```mermaid
+graph LR
+    subgraph BI [BI & Analytics Roles]
+        BI1[BI Team Lead]
+        BI2[Data Analyst]
+        BI3[BI Developer]
+        BI4[Power BI Specialist]
+    end
+    
+    subgraph BRESP [Key Responsibilities]
+        BR1[Requirements<br/>Gathering]
+        BR2[Data Analysis<br/>& Insights]
+        BR3[Dashboard<br/>Development]
+        BR4[Report<br/>Optimization]
+    end
+    
+    BI1 --> BR1
+    BI2 --> BR2
+    BI3 --> BR3
+    BI4 --> BR4
+    
+    style BI fill:#F18F01
+    style BRESP fill:#e8f5e8
+```
+
+
+## Team Collaboration & Handoffs
+
+```mermaid
+sequenceDiagram
+    participant BA as Business Analyst
+    participant DA as Data Architect
+    participant DE as Data Engineer
+    participant BI as BI Developer
+    participant DA2 as Data Analyst
+    participant DG as Data Governance
+    
+    Note over BA, DG: Phase 1: Requirements Gathering
+    BA->>DA: Business Requirements
+    DA->>DE: Technical Specifications
+    DE->>BI: Data Model Design
+    
+    Note over BA, DG: Phase 2: Development
+    DE->>DE: Build Data Pipelines
+    DE->>BI: Data Availability Notice
+    BI->>BI: Develop Power BI Models
+    
+    Note over BA, DG: Phase 3: Testing & Validation
+    BI->>DA2: Dashboard Review
+    DA2->>DG: Data Quality Validation
+    DG->>BA: Approval for Production
+    
+    Note over BA, DG: Phase 4: Deployment
+    DE->>DE: Production Deployment
+    BI->>BA: User Training
+    DG->>DG: Ongoing Monitoring
+```
+
+## 🛠️ Technical Skills Matrix
+```mermaid
+quadrantChart
+    title Data Team Skills Matrix
+    x-axis "Specialized" --> "Generalized"
+    y-axis "Beginner" --> "Expert"
+    "Data Engineer": [0.2, 0.8]
+    "Senior Data Engineer": [0.1, 0.9]
+    "BI Developer": [0.3, 0.7]
+    "Data Analyst": [0.7, 0.6]
+    "Data Architect": [0.1, 0.95]
+    "Cloud Admin": [0.4, 0.8]
+    "DataOps Engineer": [0.2, 0.75]
+```
+
+## 📈 Project Timeline with Team Allocation
+```mermaid
+gantt
+    title Punjab Cash & Carry Data Platform Project Timeline
+    dateFormat  YYYY-MM-DD
+    section Data Engineering
+    Infrastructure Setup     :2024-01-01, 30d
+    Bronze Layer Implementation :2024-01-15, 45d
+    Silver Layer Development :2024-02-15, 60d
+    Gold Layer Aggregates    :2024-03-01, 45d
+    
+    section BI & Analytics
+    Requirements Gathering   :2024-01-01, 30d
+    Data Model Design        :2024-02-01, 30d
+    Dashboard Development    :2024-03-01, 60d
+    User Acceptance Testing  :2024-04-15, 30d
+    
+    section Data Governance
+    Data Quality Framework   :2024-02-01, 60d
+    Security Implementation  :2024-03-01, 45d
+    Monitoring Setup         :2024-04-01, 30d
+```
+## 🔄 Daily Operations Workflow
+```mermaid
+flowchart TB
+    subgraph Morning [Morning Operations]
+        M1[Data Pipeline Monitoring<br/>DataOps Engineer]
+        M2[Data Quality Checks<br/>Data Governance]
+        M3[Issue Triage<br/>Senior Data Engineer]
+    end
+    
+    subgraph Daytime [Daytime Development]
+        D1[New Feature Development<br/>Data Engineers]
+        D2[Dashboard Enhancements<br/>BI Developers]
+        D3[Business Analysis<br/>Data Analysts]
+    end
+    
+    subgraph Evening [Evening Operations]
+        E1[Pipeline Executions<br/>Automated]
+        E2[Data Refreshes<br/>Automated]
+        E3[Alert Handling<br/>On-call Engineer]
+    end
+    
+    M1 --> D1
+    M2 --> D2
+    M3 --> D3
+    D1 --> E1
+    D2 --> E2
+    D3 --> E3
+    
+    style Morning fill:#e1f5fe
+    style Daytime fill:#fff3e0
+    style Evening fill:#e8f5e8
+```
+
+## 🎯 Key Performance Indicators by Role
+```mermaid
+graph LR
+    subgraph KPIs [Team KPIs]
+        K1[Pipeline Success Rate<br/>95%+]
+        K2[Data Freshness<br/><1 hour]
+        K3[Query Performance<br/><30 seconds]
+        K4[User Satisfaction<br/>4.5/5]
+        K5[Data Quality Score<br/>98%+]
+    end
+    
+    subgraph ROLES [Responsible Roles]
+        R1[Data Engineers]
+        R2[DataOps Engineer]
+        R3[BI Developers]
+        R4[BI Team Lead]
+        R5[Data Governance]
+    end
+    
+    R1 --> K1
+    R2 --> K2
+    R3 --> K3
+    R4 --> K4
+    R5 --> K5
+    
+    style KPIs fill:#e1f5fe
+    style ROLES fill:#fff3e0
+```
+
+## 💼 Hiring & Team Growth Plan
+
+```mermaid
+timeline
+    title Data Team Growth Timeline
+    section Phase 1 (Months 1-3)
+        Core Team Setup : 2 Data Engineers<br/>1 BI Developer<br/>1 Data Analyst
+    section Phase 2 (Months 4-6)
+        Team Expansion : +1 Senior Data Engineer<br/>+1 Power BI Specialist
+    section Phase 3 (Months 7-12)
+        Specialization : DataOps Engineer<br/>Data Governance Manager
+    section Phase 4 (Year 2)
+        Scale Up : Additional Data Engineers<br/>Advanced Analytics Roles
+```
+
 ## 📈 Delivered Business Value
 
 ---
