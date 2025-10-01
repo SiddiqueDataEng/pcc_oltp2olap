@@ -169,7 +169,7 @@ sequenceDiagram
     Gold->>BI: Business Metrics
 ```
 
-## ⚡ OLTP Strengths & Limitations
+## OLTP Strengths & Limitations
 
 ### ✅ OLTP Advantages
 - **High Performance**: Millions of daily transactions with sub-second response
