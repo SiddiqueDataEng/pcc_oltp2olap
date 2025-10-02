@@ -216,15 +216,15 @@ graph TB
 
 #### Python POS Stack
 
-     - *Backend API* / FastAPI / Flask
-     - *ORM* / SQLAlchemy / Tortoise ORM
-     - *Database* / PostgreSQL / (Azure Database for PostgreSQL)
-     -  Caching /Redis /(Azure Cache for Redis)
-     -  *Storage* /Azure Blob Storage/(receipts, files)
-     - *Payments* / Stripe / Razorpay / Square APIs
-     - *Authentication* / OAuth2 / JWT tokens
-     - *Async Support* / asyncio, httpx, uvicorn
-     - *Offline Support* / Local SQLite + sync service
+     - Backend API / FastAPI / Flask
+     - ORM / SQLAlchemy / Tortoise ORM
+     - Database / PostgreSQL / (Azure Database for PostgreSQL)
+     - Caching /Redis /(Azure Cache for Redis)
+     - Storage /Azure Blob Storage/(receipts, files)
+     - Payments / Stripe / Razorpay / Square APIs
+     - Authentication / OAuth2 / JWT tokens
+     - Async Support / asyncio, httpx, uvicorn
+     - Offline Support / Local SQLite + sync service
 
 
  ### Azure Tools & Services Used
