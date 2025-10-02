@@ -240,7 +240,7 @@ graph TB
 - Reliable, scalable relational database
 - Automated backups and high availability
 
-####⚡ Caching
+#### ⚡ Caching
 ##### Azure Cache for Redis
 - Session storage, frequently accessed product data, inventory counts
 - Reduces DB load
