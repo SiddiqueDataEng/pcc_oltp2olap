@@ -267,7 +267,7 @@ graph TB
 - User auth for admin portals, token issuing (optional)
 
 #### 🌐 Global Access
-#####Azure Front Door
+##### Azure Front Door
 - Global load balancing
 - SSL termination
 - WAF protection
